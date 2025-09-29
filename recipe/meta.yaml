@@ -1,4 +1,4 @@
-{% set version = '2.6.1' %}
+{% set version = "2.6.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RAthena_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RAthena/RAthena_{{ version }}.tar.gz
-  sha256: c14dfe92930f0077406462a9d407c72dd3ef0e6bb958e23af848b091faacccfe
+  sha256: 397534a8045dcce36c18689b1b3241a9c9adfcb8d26c61da7afccd402664edcf
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -43,10 +43,7 @@ test:
 about:
   home: https://github.com/DyfanJones/RAthena
   license: MIT
-  summary: Designed to be compatible with the R package 'DBI' (Database Interface) when connecting
-    to Amazon Web Service ('AWS') Athena <https://aws.amazon.com/athena/>. To do this
-    'Python' 'Boto3' Software Development Kit ('SDK') <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html>
-    is used as a driver.
+  summary: Designed to be compatible with the R package 'DBI' (Database Interface) when connecting to Amazon Web Service ('AWS') Athena <https://aws.amazon.com/athena/>. To do this 'Python' 'Boto3' Software Development Kit ('SDK') <https://boto3.amazonaws.com/v1/documentation/api/latest/index.html> is used as a driver.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
